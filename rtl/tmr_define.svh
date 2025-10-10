@@ -70,13 +70,4 @@
 `define TMR_ETM_LOAD 3'b100
 // verilog_format: on
 
-interface tmr_if (
-    input logic exclk_i
-);
-  logic capch_i;
-  logic irq_o;
-
-  modport dut(input exclk_i, input capch_i, output irq_o);
-  modport tb(input exclk_i, output capch_i, input irq_o);
-endinterface
 `endif
