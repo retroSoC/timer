@@ -110,7 +110,7 @@ module apb4_tmr (
   );
 
   // count up/down
-  counter #(`TMR_CNT_WIDTH) u_tmr_cnt_counter (
+  rs_counter #(`TMR_CNT_WIDTH) u_tmr_cnt_counter (
       .clk_i  (apb4.pclk),
       .rst_n_i(apb4.presetn),
       .clr_i  (~s_normal_mode),
@@ -213,7 +213,7 @@ module apb4_tmr (
   );
 
   // count down
-  counter #(`TMR_CNT_WIDTH) u_tmr_cap_cnt_counter (
+  rs_counter #(`TMR_CNT_WIDTH) u_tmr_cap_cnt_counter (
       .clk_i  (apb4.pclk),
       .rst_n_i(apb4.presetn),
       .clr_i  (s_cap_clr),
